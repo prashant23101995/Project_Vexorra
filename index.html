@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vexorra - 3D Interior & Furniture Portfolio</title>
+    <meta name="description" content="Immersive 3D portfolio showcasing premium interiors, furniture, and antiques with interactive elements.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div id="welcome-animation">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <span class="welcome-word">Welcome</span>
+                <span class="welcome-word">to</span>
+                <span class="welcome-word vexorra-brand">Vexorra</span>
+            </div>
+            <div class="welcome-subtitle">Premium China Furniture</div>
+        </div>
+    </div>
+
+    <!-- Floating Furniture Elements -->
+    <div class="floating-furniture chair-1"></div>
+    <div class="floating-furniture sofa-1"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-text">Loading Vexorra...</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Vexorra</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Services</a></li>
+                <li><a href="#furniture">Furniture</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Premium China Furniture</h1>
+            <p class="hero-subtitle">Three decades of expertise in luxury furnishing from China with door-to-door delivery</p>
+            <button class="cta-button" onclick="scrollToProducts()">Explore Our Services</button>
+        </div>
+        
+        <!-- 3D Scene Container -->
+        <div id="hero-3d-scene" class="scene-container">
+            <!-- Three.js will render here -->
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive interior solutions from sourcing to installation</p>
+            
+            <div class="product-grid">
+                <!-- Service cards -->
+                <div class="product-card" data-model="furniture">
+                    <div class="product-3d-preview">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury Furniture" class="service-image">
+                        <div class="service-overlay">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Furniture</h3>
+                        <p>Premium furniture sourcing from China with customization options</p>
+                        <button class="view-3d-btn">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-model="materials">
+                    <div class="product-3d-preview">
+                        <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Building Materials" class="service-image">
+                        <div class="service-overlay">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Building Materials</h3>
+                        <p>Imported marble, designer tiles, and premium building materials</p>
+                        <button class="view-3d-btn">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-model="solutions">
+                    <div class="product-3d-preview">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Complete Solutions" class="service-image">
+                        <div class="service-overlay">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Solutions</h3>
+                        <p>End-to-end interior design with door-to-door logistics</p>
+                        <button class="view-3d-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Furniture Showcase -->
+    <section class="furniture-showcase luxury-pattern" id="furniture">
+        <div class="container">
+            <div class="section-header">
+                <h2>Premium China Furniture Collection</h2>
+                <p>Discover our exquisite range of luxury imported furniture, handpicked from China's finest artisans</p>
+            </div>
+            
+            <div class="furniture-grid">
+                <div class="furniture-item antique-sofa">
+                    <div class="furniture-content">
+                        <h3>Antique Luxury Sofa</h3>
+                        <p>Handcrafted Victorian-style sofa with premium leather upholstery and intricate wooden carvings</p>
+                        <div class="furniture-price">Starting from ₹2,50,000</div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item luxury-chair">
+                    <div class="furniture-content">
+                        <h3>Executive Leather Chair</h3>
+                        <p>Premium office chair with genuine leather and ergonomic design for ultimate comfort</p>
+                        <div class="furniture-price">Starting from ₹85,000</div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item dining-set">
+                    <div class="furniture-content">
+                        <h3>Royal Dining Set</h3>
+                        <p>Elegant dining table with matching chairs, perfect for luxury homes and hotels</p>
+                        <div class="furniture-price">Starting from ₹4,50,000</div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item bedroom-suite">
+                    <div class="furniture-content">
+                        <h3>Luxury Bedroom Suite</h3>
+                        <p>Complete bedroom furniture set with premium materials and sophisticated design</p>
+                        <div class="furniture-price">Starting from ₹6,75,000</div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item office-furniture">
+                    <div class="furniture-content">
+                        <h3>Executive Office Set</h3>
+                        <p>Professional office furniture collection for corporate and business environments</p>
+                        <div class="furniture-price">Starting from ₹3,25,000</div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item marble-table">
+                    <div class="furniture-content">
+                        <h3>Imported Marble Table</h3>
+                        <p>Exquisite marble dining table with intricate patterns and premium finish</p>
+                        <div class="furniture-price">Starting from ₹1,85,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Product Viewer Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="product-3d-viewer" class="product-viewer">
+                <!-- 3D product viewer will render here -->
+            </div>
+            <div class="product-details">
+                <h3 id="modal-product-title">Product Name</h3>
+                <p id="modal-product-description">Product description</p>
+                <div class="product-controls">
+                    <button id="rotate-btn">Auto Rotate</button>
+                    <button id="reset-view-btn">Reset View</button>
+                    <button id="fullscreen-btn">Fullscreen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Vexorra</h2>
+                <p>With over three decades of expertise in architecture and interior design, VEXORRA specializes in sourcing premium furnishing products from China, offering door-to-door delivery of the finest luxury and modern décor.</p>
+                <p>We provide end-to-end interior solutions, customization of furniture, décor, and building materials that reflect modern style and refined elegance. Our comprehensive approach ensures seamless project execution from concept to completion.</p>
+                
+                <h3>Our Specializations</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>🏠 Apartment & Villa Furniture</h4>
+                        <p>Luxury residential solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏢 Office & Hotel Furniture</h4>
+                        <p>Commercial space excellence</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏥 Healthcare Furniture</h4>
+                        <p>Hospital & medical facilities</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🎭 Entertainment Furniture</h4>
+                        <p>Hospitality & leisure spaces</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏗️ Building Materials</h4>
+                        <p>Premium construction supplies</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🚚 Door-to-Door Logistics</h4>
+                        <p>Complete delivery solutions</p>
+                    </div>
+                </div>
+
+                <h3>Premium China Sourcing</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>🪨 Imported Marble</h4>
+                        <p>Luxury natural stones</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🪑 Luxury Furniture</h4>
+                        <p>High-end furniture collections</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🍳 Customized Kitchens</h4>
+                        <p>Tailored kitchen & bedroom solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🛁 Designer Tiles & Fittings</h4>
+                        <p>Premium bath & tile solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>💡 Lighting Solutions</h4>
+                        <p>Modern lighting systems</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🪟 System Windows</h4>
+                        <p>Metal profiles & window systems</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🧱 Wall Panels & Cladding</h4>
+                        <p>Architectural wall solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🔧 Smart Metal Furniture</h4>
+                        <p>Modern metal profile furniture</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏨 Hotel Room Accessories</h4>
+                        <p>Complete hospitality solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏥 Hospital Equipment</h4>
+                        <p>Medical furniture & equipment</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🎨 Artefacts & Soft Furnishing</h4>
+                        <p>Decorative elements & textiles</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🪟 Curtains & Rugs</h4>
+                        <p>Premium textile solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>📧 info@vexorra.com</p>
+                    <p>📞 +91 9821074322</p>
+                    <p>📍 922, Parekh Market, Opera House<br>Charni Road, Mumbai - 400004, India</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vexorra. All rights reserved. | Mumbai, India</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="js/three-setup.js"></script>
+    <script src="js/product-viewer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
